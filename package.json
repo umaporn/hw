@@ -1,0 +1,26 @@
+{
+  "name": "acommerce-homework",
+  "version": "1.0.0",
+  "description": "Time: about 60 minutes recommended.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --watch-poll --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^2.1.14",
+    "paginationjs": "^2.1.5",
+    "font-awesome": "4.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "npm": "^6.9.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

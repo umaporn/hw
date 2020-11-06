@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import "~bootstrap/scss/bootstrap";
+@import "~paginationjs/dist/pagination.css";
+
+@import "~font-awesome/scss/font-awesome";
+
+.card{
+    border: none;
+    img{
+        padding: 5px;
+    }
+    &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,.15);
+        border-radius: 1px;
+    }
+}
+
+i.red{
+    color: #d42e18;
+}
