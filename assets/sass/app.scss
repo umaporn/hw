@@ -2,20 +2,29 @@
 
 @import "~bootstrap/scss/bootstrap";
 @import "~paginationjs/dist/pagination.css";
-
 @import "~font-awesome/scss/font-awesome";
 
-.card{
+.card {
     border: none;
-    img{
+
+    img {
         padding: 5px;
     }
-    &:hover{
-        box-shadow: 0 0 10px rgba(0,0,0,.15);
+
+    &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
         border-radius: 1px;
     }
 }
 
-i.red{
+i.red {
     color: #d42e18;
+    padding: 3px;
+}
+
+#pagination-container {
+    float: none!important;
+    /* width: 50%; */
+    margin: 0 41%;
+    padding: 20px 0;
 }

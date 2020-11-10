@@ -9,7 +9,13 @@ require( 'paginationjs/src/pagination' );
 
 $( document ).ready( function(){
 
-	const data = require( '../../list.json' );
+	$.getJSON( 'list.json', function( data ){
+		pagination( data );
+	} );
+
+} );
+
+function pagination( data ){
 	$( '#pagination-container' ).pagination( {
 		                                         dataSource: data,
 		                                         pageSize:   8,
@@ -22,17 +28,15 @@ $( document ).ready( function(){
 			                                         $( '#nav-container' ).html( nav );
 		                                         },
 	                                         } );
-
-} );
+}
 
 function simpleTemplating( data ){
 	var html = '';
 	$.each( data, function( index, item ){
-
 		if( index % 4 === 0 ){
 			html += '<div class="row">';
 		}
-		html += '<div class="col-sm"><div class="card p-2 m-2">' +
+		html += '<div class="col-sm-3"><div class="card p-2 m-2">' +
 		        '<img src="' + item.image_url + '" class="card-img-top">' +
 		        '<div class="card-body">' +
 		        '<p class="card-text">' + item.title + '</p>';
@@ -41,7 +45,7 @@ function simpleTemplating( data ){
 			html += '<i class="fa fa-star red"></i>';
 			i++;
 		}
-		html += '<div>&#3647; '+ item.price + '</div></div>' +
+		html += '<div>&#3647; ' + item.price + '</div></div>' +
 		        '</div></div>';
 		if( index % 4 === 3 ){
 			html += '</div>';
