@@ -41,13 +41,13 @@ function simpleTemplating( data ){
 		        '<img src="' + item.image_url + '" class="card-img-top">' +
 		        '<div class="card-body">' +
 		        '<div class="card-text">' + item.title + '</div>' +
-		        '<div class="card-text">' + moment( moment(item.created_at ).toDate() ).fromNow() + '</div>';
+		        '<div class="small">' + moment( moment(item.created_at ).toDate() ).fromNow() + '</div>';
 		var i = 1;
 		while( i <= item.vote ){
 			html += '<i class="fa fa-star red"></i>';
 			i++;
 		}
-		html += '<p>&#3647; ' + item.price.toFixed(2) + '</p></div>' +
+		html += '<div class="pt-2">&#3647; ' + item.price.toFixed(2) + '</div></div>' +
 		        '</div></div>';
 		if( index % 4 === 3 ){
 			html += '</div>';
