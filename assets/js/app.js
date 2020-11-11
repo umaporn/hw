@@ -47,7 +47,7 @@ function simpleTemplating( data ){
 			html += '<i class="fa fa-star red"></i>';
 			i++;
 		}
-		html += '<p>&#3647; ' + item.price + '</p></div>' +
+		html += '<p>&#3647; ' + item.price.toFixed(2) + '</p></div>' +
 		        '</div></div>';
 		if( index % 4 === 3 ){
 			html += '</div>';
